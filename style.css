@@ -1,0 +1,137 @@
+
+/* For Body as whole */
+
+html,body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-family: Gilroy;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(83, 13, 39);
+
+    /* For panel in main to align to center */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#panel{
+    overflow: hidden; /* To remove any overflowing those out of panel border */
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#ptop{
+
+    /* to align score & box properly */
+    /* padding: 10px; */
+    /* To align in PTOP center */
+    align-items: center;
+
+    /* To create space between all child elem */
+    justify-content: space-between;
+
+    /* Panel Top Ke child ko horiontally 1 row mein 1 after another ke liye */
+    display: flex;
+
+    /* Color white for any text in PTOP */
+    color: #fff;
+    width: 100%;
+
+    /* Not to cover fully, from top of panel to 100px */
+    height: 85px; 
+    background-color: rgb(13, 51, 13);
+}
+
+.box{
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #000;
+    font-weight: 600px;
+    font-size: 25px;
+}
+
+.elem{
+
+    /* Since elem is parent of box, elem ka style box ko bhi jayega */
+    margin-right: 10em;
+    margin-left: 10em;
+    /* Elem+box+Text ye 3 ko display flex in row horizontal */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.elem h2{
+    font-weight: 1000;
+    font-size: 30px;
+}
+
+#pbtm{
+    /* To allow continuous & dynamic rows creation of bubbles */
+    /* one after another row after row */
+    /* nowrap is by default */
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    gap: 10px;
+    /* To define this, from 100% - 100px. since px can't be done */
+    /* use calc() function */
+    height: calc(100% - 85);
+    margin-left: -10px;
+
+}
+
+.bubble{
+    width: 45px;
+    height: 45px;
+    background-color: rgb(234, 186, 10);
+    color: #000;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.bubble:hover{
+    /* To Show POINTER CURSOR */
+    cursor: pointer;
+    background-color: rgb(21, 65, 21);
+    color: #fff;
+    
+}
+
+.card{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    color: #000;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: rgb(250, 217, 4);
+    margin-top: 5em;
+}
+
+/* In CSS, keyframes are used for animations. 
+It gives you more control over the animation you want to perform. 
+The animation is created by gradually changing from one style to another. 
+A keyframe, also written as “key frame,” is something that defines the 
+starting and/or ending point of any smooth transition.
+*/
+@keyframes fade-in {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
